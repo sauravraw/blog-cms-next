@@ -9,11 +9,9 @@ export default function getAllBlogs(contentType, condition) {
 			.find()
 			.then(
 				function success(result) {
-					// console.log(result[0]); // list of objects of employee details
 					return result[0];
 				},
 				function error(err) {
-					// err object
 					console.log(err);
 					return err;
 				}
@@ -23,11 +21,9 @@ export default function getAllBlogs(contentType, condition) {
 		.find()
 		.then(
 			function success(result) {
-				// console.log(result[0]); // list of objects of employee details
 				return result[0];
 			},
 			function error(err) {
-				// err object
 				console.log(err);
 				return err;
 			}
