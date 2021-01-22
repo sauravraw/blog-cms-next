@@ -10,28 +10,44 @@ export default function singlePost(props) {
 	return (
 		<>
 			<div className={styles.container}>
-				<h1 className={styles.blogTitle}>{single.title}</h1>
 				<section className={styles.singlePost}>
 					<img
 						src={single.blog_image.url}
 						alt={single.title}
 						className={styles.singleImage}
 					/>
-					<h2 className={styles.blogAuthor}>
-						Author: {single.blog_author}
-					</h2>
+					<h1 className={styles.blogTitle}>{single.title}</h1>
 					<p className={styles.blogContent}>{single.blog_content}</p>
-				</section>
 
-				<section className={styles.singleAside}></section>
+					<h3 className={styles.blogAuthor}>
+						<span>Author</span> : {single.blog_author}
+					</h3>
+				</section>
+			</div>
+			<div className={styles.container}>
 				<h1>Related Links</h1>
-				{single.related_blogs_link.map((link) => {
-					return (
-						<Link href={`/blog/${link.uid}`}>
-							<a>{link.title}</a>
-						</Link>
-					);
-				})}
+				<div className={styles.relatedBlog}>
+					{single.related_blogs_link.map((link) => {
+						return (
+							<div
+								className={styles.relatedBlogConatiner}
+								key={link.title}
+							>
+								<Link href={`/blog/${link.uid}`}>
+									<a className={styles.relatedBlogTitle}>
+										<img
+											src={link.blog_image.url}
+											alt={link.title}
+											className={styles.relatedBlogImage}
+										/>
+
+										{link.title}
+									</a>
+								</Link>
+							</div>
+						);
+					})}
+				</div>
 				<Link href="/#">
 					<a className={styles.backButton}>Back</a>
 				</Link>
