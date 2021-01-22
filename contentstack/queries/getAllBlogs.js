@@ -4,7 +4,9 @@ export default function getAllBlogs(contentType, id = null) {
 	const Query = Stack.ContentType(contentType).Query();
 	if (id) {
 		console.log("hello", id);
-		const Query = Stack.ContentType(contentType).Entry(id);
+		const Query = Stack.ContentType(contentType)
+			.Entry(id)
+			.includeReference("related_blogs_link");
 		return Query.fetch().then(
 			function success(entry) {
 				let data = entry.get("title");

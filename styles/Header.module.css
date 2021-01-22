@@ -3,6 +3,7 @@
 	width: 80%;
 	height: 10%;
 	display: flex;
+	justify-content: space-between;
 }
 
 .navHeader {
@@ -35,4 +36,8 @@
 
 .navLink a {
 	margin: 0 10px;
+}
+
+.navLink a:hover {
+	transform: scale(1.2);
 }

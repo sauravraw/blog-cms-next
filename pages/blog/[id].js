@@ -1,19 +1,30 @@
-// import Stack from "../../contentstack/Stack";
 import React from "react";
 import SinglePost from "../../components/SinglePost";
 
 import getAllBlogs from "../../contentstack/queries/getAllBlogs";
 
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+
 export default function singleBlog(props) {
-	return <SinglePost single={props.single} />;
+	return (
+		<>
+			<Header header={props.header} />
+			<SinglePost single={props.single} />
+			<Footer footer={props.footer} />
+		</>
+	);
 }
 
 export const getStaticProps = async (context) => {
+	const header = await getAllBlogs("blog_cms_header_saurav");
+	const footer = await getAllBlogs("blog_cms_footer_saurav");
 	let data = await getAllBlogs("blog_cms_saurav", `${context.params.id}`);
-	console.log("hello", data);
 	return {
 		props: {
 			single: { ...data },
+			header: [...header],
+			footer: [...footer],
 		},
 	};
 };
