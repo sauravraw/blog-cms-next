@@ -1,0 +1,38 @@
+.navContainer {
+	margin: 30px auto;
+	width: 80%;
+	height: 10%;
+	display: flex;
+}
+
+.navHeader {
+	display: flex;
+	justify-content: space-evenly;
+	width: 40%;
+	height: 50%;
+}
+
+.navImage {
+	width: 100px;
+	height: 100px;
+}
+
+.navTitle {
+	width: 30%;
+	height: 40px;
+	margin: auto;
+}
+
+.navLinkContainer {
+	width: 40%;
+	display: flex;
+	margin: 30px;
+	justify-content: space-evenly;
+}
+.navLink {
+	padding: 10px;
+}
+
+.navLink a {
+	margin: 0 10px;
+}
