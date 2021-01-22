@@ -4,7 +4,6 @@ import Link from "next/link";
 
 function Header(props) {
 	let header = props.header[0];
-	console.log(props.header[0]);
 	return (
 		<div className={styles.navContainer}>
 			<div className={styles.navHeader}>
@@ -16,10 +15,10 @@ function Header(props) {
 				<h1>{header.header_image.blog_header_title}</h1>
 			</div>
 			<div className={styles.navLinkContainer}>
-				<p className={styles.navLink} key={header.uid}>
+				<p className={styles.navLink}>
 					{header.navlink.map((link) => {
 						return (
-							<Link href={link.href}>
+							<Link href={link.href} key={link.title}>
 								<a>{link.title}</a>
 							</Link>
 						);

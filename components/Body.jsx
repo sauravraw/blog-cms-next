@@ -1,6 +1,6 @@
 import React from "react";
 
-function Body() {
+function Body(props) {
 	return <div></div>;
 }
 

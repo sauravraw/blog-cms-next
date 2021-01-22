@@ -1,0 +1,22 @@
+.footerContainer {
+	margin: auto 50px;
+	width: 90%;
+	height: 15%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: fixed;
+	bottom: 0;
+}
+
+.socialConatiner {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+}
+
+.socialicon {
+	width: 25px;
+	height: 25px;
+	margin: 20px;
+}
