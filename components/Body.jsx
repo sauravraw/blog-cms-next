@@ -29,6 +29,7 @@ export default function Body(props) {
 									<h2 className={styles.flipfont}>
 										{singleBlog.title}
 									</h2>
+									<a className={styles.viewButton}>View More</a>
 								</div>
 							</div>
 						</a>

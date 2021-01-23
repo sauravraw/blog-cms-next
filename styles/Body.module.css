@@ -11,6 +11,18 @@
 	box-shadow: 0 0 7px #888888;
 }
 
+.viewButton {
+	padding: 10px;
+	width: 50px;
+	height: 30px;
+	border: 1px solid #fff;
+}
+.viewButton:hover {
+	border: 1px solid #000;
+	background-color: #fff;
+	color: #000;
+}
+
 .flip {
 	position: relative;
 }

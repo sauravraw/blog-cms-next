@@ -32,6 +32,12 @@
 	margin-bottom: 100px;
 	padding-top: 50px;
 }
+
+.blogImageContainer {
+	display: block;
+	margin: 0 auto;
+}
+
 .singlePost {
 	align-items: center;
 }
@@ -300,5 +306,22 @@
 	}
 	.relatedBlogConatiner {
 		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.wrapper {
+		margin-left: 100px;
+	}
+	.box {
+		width: 0;
+		margin: 0;
+	}
+	.boxcard {
+		margin: 0 100px;
+	}
+
+	.relatedBlog {
+		height: 800px;
 	}
 }

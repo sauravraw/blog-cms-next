@@ -1,8 +1,8 @@
 .footerContainer {
 	margin: 0;
-	padding: 15px 50px;
+	padding: 0 50px;
 	width: 100%;
-	height: 15%;
+	height: 10%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -17,6 +17,7 @@
 	width: 50%;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .socialicon {
@@ -27,4 +28,18 @@
 
 .socialicon:hover {
 	transform: scale(1.5);
+}
+
+@media (max-width: 425px) {
+	.footerContainer {
+		flex-direction: column;
+		height: 150px;
+	}
+	.footerContainer h3 {
+		font-size: 16px;
+	}
+	.socialicon {
+		width: 30px;
+		height: 30px;
+	}
 }

@@ -7,7 +7,7 @@ function Footer(props) {
 	let footer = props.footer[0];
 	return (
 		<div className={styles.footerContainer}>
-			<h1>{footer.copyright}</h1>
+			<h3>{footer.copyright}</h3>
 			<div className={styles.socialContainer}>
 				{footer.social_link.map((link) => {
 					return (

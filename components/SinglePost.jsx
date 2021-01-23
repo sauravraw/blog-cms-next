@@ -11,13 +11,15 @@ export default function singlePost(props) {
 		<>
 			<div className={styles.container}>
 				<section className={styles.singlePost}>
-					<div className={styles.wrapper}>
-						<div
-							className={styles.card}
-							style={{
-								backgroundImage: `url(${single.blog_image.url})`,
-							}}
-						></div>
+					<div className={styles.blogImageContainer}>
+						<div className={styles.wrapper}>
+							<div
+								className={styles.card}
+								style={{
+									backgroundImage: `url(${single.blog_image.url})`,
+								}}
+							></div>
+						</div>
 					</div>
 
 					<h1 className={styles.blogTitle}>{single.title}</h1>
