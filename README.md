@@ -1,6 +1,6 @@
 # Main purpose was to connect ContentStack CMS with Next
 
-# Live Demo [Click Here](https://blog-cms-next-gks77ceqm.vercel.app)
+# Live Demo [Click Here](https://blog-cms-next-xi.vercel.app/)
 
 
 -------------------------------------------------------------------------------------------------
