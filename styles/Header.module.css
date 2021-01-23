@@ -58,12 +58,15 @@
 	display: none;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	.navHeader h1 {
 		margin-bottom: 20px;
 		font-size: 25px;
 		width: 60%;
 	}
+}
+
+@media screen and (max-width: 425px) {
 	.navLink {
 		display: none;
 	}
@@ -73,9 +76,7 @@
 		color: black;
 		font-size: 40px;
 	}
-}
 
-@media (max-width: 425px) {
 	.navHeader h1 {
 		margin-left: 20px;
 	}

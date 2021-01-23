@@ -63,7 +63,7 @@ export default function singlePost(props) {
 						);
 					})}
 				</div>
-				<Link href="/#">
+				<Link href="/blogs">
 					<a className={styles.backButton}>Back</a>
 				</Link>
 			</div>

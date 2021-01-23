@@ -24,7 +24,7 @@
 		-1px -1px 0 #000;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	.blur h1 {
 		font-size: 40px;
 	}
@@ -36,7 +36,7 @@
 	}
 }
 
-@media (max-width: 426px) {
+@media screen and (max-width: 426px) {
 	.blur h1 {
 		font-size: 40px;
 	}
@@ -48,7 +48,7 @@
 	}
 }
 
-@media (max-width: 375px) {
+@media screen and (max-width: 375px) {
 	.blur {
 		margin-top: 130px;
 	}
@@ -60,7 +60,7 @@
 	}
 }
 
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
 	.blur {
 		margin-top: 100px;
 	}

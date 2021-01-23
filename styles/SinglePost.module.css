@@ -310,7 +310,10 @@
 
 @media screen and (max-width: 425px) {
 	.wrapper {
-		margin-left: 100px;
+		margin-left: 38px;
+	}
+	.wrapper:before {
+		margin-left: 10px;
 	}
 	.box {
 		width: 0;

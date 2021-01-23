@@ -99,3 +99,27 @@
 		17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04),
 		19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
 }
+
+@media screen and (max-width: 425px) {
+	.cardContainer {
+		background: transparent;
+		border: transparent;
+		box-shadow: none;
+		width: 70%;
+	}
+
+	.back {
+		width: 80%;
+		padding: 0;
+	}
+	.back h2 {
+		width: 50%;
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 325px) {
+	.back {
+		margin-left: 30px;
+	}
+}

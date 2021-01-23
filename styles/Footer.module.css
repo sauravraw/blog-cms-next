@@ -30,7 +30,7 @@
 	transform: scale(1.5);
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	.footerContainer h3 {
 		font-size: 13px;
 		margin-bottom: 20px;
@@ -41,8 +41,9 @@
 	}
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
 	.footerContainer {
+		padding: 0 22px;
 		flex-direction: column;
 		height: 110px;
 	}
