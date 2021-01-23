@@ -7,8 +7,9 @@ body {
 	margin: 0;
 	/* display: grid; */
 	place-items: center;
-	padding-bottom: 20px;
-	background-color: #dce7fc;
+	background-color: #ebf1fc;
+
+	font-family: "Roboto Slab", serif;
 }
 
 a {
@@ -27,17 +28,17 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey;
+	box-shadow: inset 0 0 5px #0d051e;
 	border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: rgb(24, 126, 151);
+	background: #2b1068;
 	border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #b30000;
+	background: #7c50e3;
 }

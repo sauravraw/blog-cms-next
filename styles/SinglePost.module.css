@@ -127,7 +127,7 @@
 /* Banner Image */
 
 .wrapper {
-	margin-left: 200px;
+	margin-left: 100px;
 	margin-bottom: 270px;
 	position: relative;
 	perspective: 55em;
@@ -152,7 +152,7 @@
 	box-shadow: 0 10px 30px -3px rgba(0, 0, 0, 0.1);
 	background-repeat: no-repeat;
 	overflow: hidden;
-	width: 80%;
+	width: 90%;
 	height: 450%;
 }
 
@@ -171,8 +171,8 @@
 	grid-area: 1 / 1;
 	content: "";
 	backface-visibility: hidden;
-	height: 400%;
-	width: 65%;
+	height: 450%;
+	width: 90%;
 	margin-top: calc(-1 * var(--bw));
 	margin-left: calc(-1 * var(--bw));
 	background: transparent;
@@ -186,7 +186,6 @@
 .wrapper:hover > div,
 .wrapper:hover:before {
 	transform: none;
-	border: none;
 }
 
 .wrapper > div,
