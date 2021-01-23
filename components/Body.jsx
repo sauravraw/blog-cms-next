@@ -13,7 +13,7 @@ export default function Body(props) {
 						href={`/blog/${singleBlog.uid}`}
 						key={singleBlog.blog_author}
 					>
-						<a>
+						<a target="_new">
 							<div className={styles.flip}>
 								<div
 									className={styles.front}

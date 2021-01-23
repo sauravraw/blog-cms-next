@@ -11,12 +11,15 @@ function Footer(props) {
 			<div className={styles.socialContainer}>
 				{footer.social_link.map((link) => {
 					return (
-						<img
-							className={styles.socialicon}
-							src={link.social_image.url}
-							alt={link.link_name}
-							key={link.link_name}
-						/>
+						<Link href={link.link_url.href} key={link.link_name}>
+							<a target="_new">
+								<img
+									className={styles.socialicon}
+									src={link.social_image.url}
+									alt={link.link_name}
+								/>
+							</a>
+						</Link>
 					);
 				})}
 			</div>
