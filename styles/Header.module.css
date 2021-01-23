@@ -6,8 +6,6 @@
 	justify-content: space-between;
 	background-color: #0d051e;
 	color: white;
-	position: fixed;
-	z-index: 999;
 }
 
 .navHeader {
@@ -37,7 +35,9 @@
 	margin: 15px 0;
 	justify-content: space-evenly;
 }
-
+.navLink {
+	margin-left: -25px;
+}
 .navLink a {
 	border: 1px solid white;
 	background: transparent;
@@ -48,6 +48,9 @@
 	margin: 0 10px;
 	font-size: 15px;
 	border-radius: 10px 0 10px 0;
+}
+.navLink a:last-child {
+	margin-right: 0;
 }
 
 .navLink a:hover {
