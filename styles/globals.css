@@ -1,8 +1,10 @@
 html,
 body {
-	padding: 0;
 	margin: 0;
+	display: grid;
+	place-items: center;
 	padding-bottom: 20px;
+	background-color: #dce7fc;
 }
 
 a {

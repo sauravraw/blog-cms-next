@@ -11,11 +11,15 @@ export default function singlePost(props) {
 		<>
 			<div className={styles.container}>
 				<section className={styles.singlePost}>
-					<img
-						src={single.blog_image.url}
-						alt={single.title}
-						className={styles.singleImage}
-					/>
+					<div className={styles.wrapper}>
+						<div
+							className={styles.card}
+							style={{
+								backgroundImage: `url(${single.blog_image.url})`,
+							}}
+						></div>
+					</div>
+
 					<h1 className={styles.blogTitle}>{single.title}</h1>
 					<p className={styles.blogContent}>{single.blog_content}</p>
 
@@ -24,7 +28,7 @@ export default function singlePost(props) {
 					</h3>
 				</section>
 			</div>
-			<div className={styles.container}>
+			<div className={styles.relatedLinkConatiner}>
 				<h1>Related Links</h1>
 				<div className={styles.relatedBlog}>
 					{single.related_blogs_link.map((link) => {
@@ -33,17 +37,27 @@ export default function singlePost(props) {
 								className={styles.relatedBlogConatiner}
 								key={link.title}
 							>
-								<Link href={`/blog/${link.uid}`}>
-									<a className={styles.relatedBlogTitle}>
-										<img
-											src={link.blog_image.url}
-											alt={link.title}
-											className={styles.relatedBlogImage}
-										/>
-
-										{link.title}
-									</a>
-								</Link>
+								<div className={styles.box}>
+									<div className={styles.boxcard}>
+										<div className={styles.imgBx}>
+											<img
+												src={link.blog_image.url}
+												alt={link.title}
+											/>
+										</div>
+										<div className={styles.details}>
+											<Link href={`/blog/${link.uid}`}>
+												<a className={styles.relatedBlogTitle}>
+													<h2>
+														{link.title}
+														<br />
+														<span> {link.blog_author}</span>
+													</h2>
+												</a>
+											</Link>
+										</div>
+									</div>
+								</div>
 							</div>
 						);
 					})}

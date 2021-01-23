@@ -14,15 +14,22 @@ export default function Body(props) {
 						key={singleBlog.blog_author}
 					>
 						<a>
-							<div className={styles.card1} id={singleBlog.blog_author}>
-								<img
-									className={styles.singleBlogImage}
-									src={singleBlog.blog_image.url}
-									alt={singleBlog.blog_author}
-								/>
-								<h1 className={styles.singleBlogAuthor}>
-									{singleBlog.title}
-								</h1>
+							<div className={styles.flip}>
+								<div
+									className={styles.front}
+									style={{
+										backgroundImage: `url(${singleBlog.blog_image.url})`,
+									}}
+								>
+									<h1 className={styles.text_shadow}>
+										{singleBlog.title}
+									</h1>
+								</div>
+								<div className={styles.back}>
+									<h2 className={styles.flipfont}>
+										{singleBlog.title}
+									</h2>
+								</div>
 							</div>
 						</a>
 					</Link>

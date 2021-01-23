@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap");
 
 .container {
+	background-color: white;
 	width: 80%;
 	height: 70%;
 	margin: 10px auto;
@@ -10,14 +11,27 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
-	border: 1px solid black;
 	align-items: center;
 	border-radius: 0 50px 0 50px;
-	overflow: hidden;
-	box-shadow: 3px 5px #888888;
+	box-shadow: 0 0 7px #888888;
 	margin-bottom: 100px;
+	padding-top: 50px;
 }
 
+.relatedLinkConatiner {
+	background: transparent;
+	width: 80%;
+	height: 70%;
+	margin: 10px auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0 50px 0 50px;
+	margin-bottom: 100px;
+	padding-top: 50px;
+}
 .singlePost {
 	align-items: center;
 }
@@ -89,8 +103,8 @@
 	justify-content: space-evenly;
 }
 .relatedBlogConatiner {
-	width: 150px;
-	height: 200px;
+	width: 500px;
+	height: 500px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -107,6 +121,170 @@
 .relatedBlogTitle {
 	text-align: center;
 }
+
+/* Banner Image */
+
+.wrapper {
+	margin-left: 200px;
+	margin-bottom: 270px;
+	position: relative;
+	perspective: 55em;
+	display: grid;
+	transform-style: preserve-3d;
+}
+
+.card {
+	grid-area: 1 / 1;
+	height: 400px;
+	width: 500px;
+	transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 30px;
+	text-transform: uppercase;
+	font-size: 60px;
+	font-weight: 900;
+	backface-visibility: hidden;
+	box-shadow: 0 10px 30px -3px rgba(0, 0, 0, 0.1);
+	background-repeat: no-repeat;
+	overflow: hidden;
+	width: 80%;
+	height: 450%;
+}
+
+.card .enclosed {
+	background: #000;
+	line-height: 1;
+	padding: 0 5px;
+	display: inline-block;
+	transform: translate(-1px, 1px) scale(0.75);
+	transform-origin: right center;
+	overflow: hidden;
+}
+
+.wrapper:before {
+	--bw: 9px;
+	grid-area: 1 / 1;
+	content: "";
+	backface-visibility: hidden;
+	height: 400%;
+	width: 65%;
+	margin-top: calc(-1 * var(--bw));
+	margin-left: calc(-1 * var(--bw));
+	background: transparent;
+	transform: translateX(-60px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+	pointer-events: none;
+	border: var(--bw) solid #000;
+	box-sizing: content-box;
+	overflow: hidden;
+}
+
+.wrapper:hover > div,
+.wrapper:hover:before {
+	transform: none;
+	border: none;
+}
+
+.wrapper > div,
+.wrapper:before {
+	will-change: transform;
+	transition: 0.3s transform cubic-bezier(0.25, 0.46, 0.45, 1);
+}
+
+/* Banner Image */
+
+/* Related Card */
+
+.box {
+	width: 1200px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-gap: 15px;
+	margin: 0 auto;
+}
+.boxcard {
+	position: relative;
+	width: 300px;
+	height: 350px;
+	background: rgb(185, 181, 181);
+	margin: 0 auto;
+	border-radius: 4px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	border: 1px solid black;
+}
+.boxcard:before,
+.boxcard:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	background: rgb(100, 100, 100);
+	transition: 0.5s;
+	z-index: -1;
+}
+.boxcard:hover:before {
+	transform: rotate(20deg);
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+.boxcard:hover:after {
+	transform: rotate(10deg);
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+.boxcard .imgBx {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	right: 10px;
+	background: #222;
+	transition: 0.5s;
+	z-index: 1;
+}
+
+.boxcard:hover .imgBx {
+	bottom: 80px;
+}
+
+.boxcard .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.boxcard .details {
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	height: 60px;
+	text-align: center;
+}
+
+.boxcard .details h2 {
+	margin: 0;
+	padding: 0;
+	font-weight: 600;
+	font-size: 20px;
+	color: #777;
+	text-transform: uppercase;
+}
+
+.boxcard .details h2 span {
+	font-weight: 500;
+	font-size: 16px;
+	color: #f38695;
+	display: block;
+	margin-top: 5px;
+}
+
+/* Related Card */
 
 @media screen and (max-width: 736px) {
 	.relatedBlog {
