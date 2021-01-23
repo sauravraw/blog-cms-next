@@ -6,7 +6,6 @@ import Footer from "./Footer";
 
 export default function singlePost(props) {
 	let single = props.single;
-	console.log(single);
 	return (
 		<>
 			<div className={styles.container}>

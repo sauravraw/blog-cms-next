@@ -30,13 +30,25 @@
 	transform: scale(1.5);
 }
 
+@media (max-width: 768px) {
+	.footerContainer h3 {
+		font-size: 13px;
+		margin-bottom: 20px;
+	}
+	.socialicon {
+		width: 15px;
+		height: 15px;
+	}
+}
+
 @media (max-width: 425px) {
 	.footerContainer {
 		flex-direction: column;
-		height: 150px;
+		height: 110px;
 	}
 	.footerContainer h3 {
 		font-size: 16px;
+		margin-bottom: 0;
 	}
 	.socialicon {
 		width: 30px;

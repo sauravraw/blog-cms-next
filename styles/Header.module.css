@@ -1,7 +1,7 @@
 .navContainer {
-	margin: 30px auto;
+	margin: 5px auto;
 	width: 80%;
-	height: 10%;
+	height: 5%;
 	display: flex;
 	justify-content: space-between;
 }
@@ -17,12 +17,15 @@
 	width: 60px;
 	height: 60px;
 	border-radius: 15px;
+	margin-top: 10px;
+	border: 1px solid black;
 }
 
 .navTitle {
 	width: 30%;
 	height: 40px;
 	margin: auto;
+	font-family: "Roboto Slab", serif;
 }
 
 .navLinkContainer {
@@ -33,12 +36,12 @@
 }
 
 .navLink a {
-	border: 1px solid white;
-	background-color: black;
+	border: 1px solid black;
+	background: transparent;
 	width: 40px;
 	height: 10px;
 	padding: 10px 40px;
-	color: white;
+	color: black;
 	margin: 0 10px;
 	font-size: 15px;
 }
@@ -48,4 +51,32 @@
 	border: 1px solid black;
 	background: transparent;
 	color: black;
+	background-color: white;
+}
+
+.hamburger {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.navHeader h1 {
+		margin-bottom: 20px;
+		font-size: 25px;
+		width: 60%;
+	}
+	.navLink {
+		display: none;
+	}
+	.hamburger {
+		margin-top: 20px;
+		display: block;
+		color: black;
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 425px) {
+	.navHeader h1 {
+		margin-left: 20px;
+	}
 }

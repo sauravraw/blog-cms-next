@@ -1,15 +1,15 @@
 import Head from "next/head";
+import styles from "../styles/Home.module.css";
 import getAllBlogs from "../contentstack/queries/getAllBlogs";
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import LandingPage from "../components/LandingPage";
+import Body from "../components/Body";
 
-export default function Home(props) {
+export default function Blog(props) {
 	return (
 		<>
 			<Header header={props.header} />
-			<LandingPage banner={props.banner} />
+			<Body body={props.body} />
 			<Footer footer={props.footer} />
 		</>
 	);
@@ -17,9 +17,9 @@ export default function Home(props) {
 
 export const getStaticProps = async () => {
 	const header = await getAllBlogs("blog_cms_header_saurav");
-	const banner = await getAllBlogs("blog_cms_landingpage_saurav");
+	const body = await getAllBlogs("blog_cms_saurav");
 	const footer = await getAllBlogs("blog_cms_footer_saurav");
 	return {
-		props: { header: [...header], footer: [...footer], banner: [...banner] },
+		props: { header: [...header], body: [...body], footer: [...footer] },
 	};
 };

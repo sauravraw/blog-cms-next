@@ -1,15 +1,15 @@
-import Head from "next/head";
+import React from "react";
 import getAllBlogs from "../contentstack/queries/getAllBlogs";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import LandingPage from "../components/LandingPage";
+import ErrorPage from "../components/ErrorPageComponent";
 
-export default function Home(props) {
+export default function ErrorPageAdded(props) {
 	return (
 		<>
 			<Header header={props.header} />
-			<LandingPage banner={props.banner} />
+			<ErrorPage fourzerofour={props.fourzerofour} />
 			<Footer footer={props.footer} />
 		</>
 	);
@@ -17,9 +17,13 @@ export default function Home(props) {
 
 export const getStaticProps = async () => {
 	const header = await getAllBlogs("blog_cms_header_saurav");
-	const banner = await getAllBlogs("blog_cms_landingpage_saurav");
+	const fourzerofour = await getAllBlogs("blog_cms_landingpage_saurav");
 	const footer = await getAllBlogs("blog_cms_footer_saurav");
 	return {
-		props: { header: [...header], footer: [...footer], banner: [...banner] },
+		props: {
+			header: [...header],
+			footer: [...footer],
+			fourzerofour: [...fourzerofour],
+		},
 	};
 };

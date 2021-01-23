@@ -1,17 +1,22 @@
 import React from "react";
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function Header(props) {
 	let header = props.header[0];
 	return (
 		<div className={styles.navContainer}>
 			<div className={styles.navHeader}>
-				<img
-					className={styles.navImage}
-					src={header.header_image.blog_header_image.url}
-					alt={header.header_image.blog_header_title}
-				/>
+				<Link href="/">
+					<a>
+						<img
+							className={styles.navImage}
+							src={header.header_image.blog_header_image.url}
+							alt={header.header_image.blog_header_title}
+						/>
+					</a>
+				</Link>
 				<h1>{header.header_image.blog_header_title}</h1>
 			</div>
 			<div className={styles.navLinkContainer}>
@@ -25,6 +30,7 @@ function Header(props) {
 					})}
 				</p>
 			</div>
+			<GiHamburgerMenu className={styles.hamburger} />
 		</div>
 	);
 }
