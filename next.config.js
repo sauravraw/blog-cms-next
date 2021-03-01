@@ -1,7 +1,7 @@
 module.exports = (phase, { defaultConfig }) => {
-	return {
-		images: {
-			domains: ["images.contentstack.io"],
-		},
-	};
+  return {
+    images: {
+      domains: ["images.contentstack.io"],
+    },
+  };
 };
